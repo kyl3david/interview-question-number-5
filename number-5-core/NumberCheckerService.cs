@@ -4,10 +4,10 @@ using System.Collections.Generic;
 
 namespace number_5_core
 {
-    public class NumberChecker
+    public class NumberCheckerService
     {
         private List<IInputChecker> inputCheckers { get; set; }
-        public NumberChecker()
+        public NumberCheckerService()
         {
             inputCheckers = new List<IInputChecker>
             {

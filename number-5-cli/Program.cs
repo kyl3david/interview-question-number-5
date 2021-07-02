@@ -13,7 +13,7 @@ namespace number_5_cli
 
         static void RunBetweenInputAnd5()
         {
-            var numberChecker = new NumberChecker();
+            var numberCheckerService = new NumberCheckerService();
             var userPrompt = "\nPlease enter a number below 5 to get the difference of the input to 5 or 'q' to quit: ";
 
             string input = getUserInput(userMessage: userPrompt);
@@ -21,7 +21,7 @@ namespace number_5_cli
 
             while (input != "q")
             {
-                var result = numberChecker.DifferenceBetweenInputAnd5(input);
+                var result = numberCheckerService.DifferenceBetweenInputAnd5(input);
                 if (result.Valid)
                 {
                     positiveOutput(message: $"Difference of '{input}' to 5 is: {result.Difference}");
